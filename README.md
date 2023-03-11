@@ -30,10 +30,9 @@ and also maintains some mesh algorithms and a simple renderer.
 - **Theseus' ship**
   - Functionality is modularized into smaller crates that can be replaced, like
     the parts in [the Ship of Theseus](https://en.wikipedia.org/wiki/Ship_of_Theseus).
-  - Based on the many lessons we learned in the past, we have given up on overall
-    optimizations that a single library/crate would afford. A collection of
-    individual, optimized crates carries less risk and can be made just as efficient.
-  - Feature creep usually happens over time. Bundling stuff in smaller crates will help us deal with it.
+  - Based on the many lessons we learned in the past, we have given up on overall optimizations that a single library/crate would afford.
+    A collection of individual, optimized crates carries less risk and can be made just as efficient.
+  - Feature creep usually happens over time. While we do not believe to be immune from it, bundling stuff in smaller crates will help us deal with it.
   - It is possible to implement small-scale web applications like data converter with minimal dependencies.
 
 ## License
