@@ -2350,7 +2350,7 @@ impl Table {
         }
     }
 
-    fn shell_vertices(&self, shell: &ShellHolder) -> (Vec<Point3>, HashMap<u64, usize>) {
+    pub fn shell_vertices(&self, shell: &ShellHolder) -> (Vec<Point3>, HashMap<u64, usize>) {
         use PlaceHolder::Ref;
         let mut vidx_map = HashMap::<u64, usize>::new();
         let vertex_to_point = |v: PlaceHolder<VertexPointHolder>| {
@@ -2379,7 +2379,7 @@ impl Table {
         (vertices, vidx_map)
     }
 
-    fn shell_edges(
+    pub fn shell_edges(
         &self,
         shell: &ShellHolder,
         vidx_map: &HashMap<u64, usize>,
@@ -2423,7 +2423,7 @@ impl Table {
             .collect();
         (edges, eidx_map)
     }
-    fn face_bound_to_edges(
+    pub fn face_bound_to_edges(
         &self,
         bound: FaceBoundHolder,
         eidx_map: &HashMap<u64, usize>,
@@ -2458,7 +2458,7 @@ impl Table {
         Some(edges)
     }
 
-    fn shell_faces(
+    pub fn shell_faces(
         &self,
         shell: &ShellHolder,
         eidx_map: &HashMap<u64, usize>,
